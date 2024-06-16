@@ -1,0 +1,7 @@
+https://www.fosstechnix.com/mysql-innodb-cluster-setup/
+
+https://ahelpme.com/software/mysql/install-and-deploy-mysql-8-innodb-cluster-with-3-nodes-under-centos-8-and-mysql-router-for-ha/
+
+https://dev.to/garutilorenzo/install-and-configure-mysql-server-and-mysql-innodb-cluster-311b
+
+https://github.com/garutilorenzo/ansible-role-linux-mysql/blob/master/files/mysql/conf.d/mysql.cnf
