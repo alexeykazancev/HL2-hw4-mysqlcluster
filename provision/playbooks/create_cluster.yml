@@ -1,11 +1,14 @@
-tasks:
-  - name: "connect"
-    shell: mysqlsh --uri clusteradmin@mysql-cluster1 -p'1' --execute "shell.connect('clusteradmin@mysql-cluster1:3306')"
-  - name: "create cluster"
-    shell: mysqlsh --uri clusteradmin@mysql-cluster1 -p'1' --execute "cluster = dba.createCluster('my_innodb_cluster');"
-  - name: "add instance 2"
-    shell: mysqlsh --uri clusteradmin@mysql-cluster1 -p'1' --execute "cluster.addInstance('clusteradmin@mysql-cluster2:3306')"
-  - name: "add instance 3"
-    shell: mysqlsh --uri clusteradmin@mysql-cluster1 -p'1' --execute "cluster.addInstance('clusteradmin@mysql-cluster3:3306')"
-  - name: "cluster status"
-    shell: mysqlsh --uri clusteradmin@mysql-cluster1 -p'1' --execute "cluster.status()"
+- hosts: all
+  become: true
+    
+  tasks:
+    - name: "connect"
+      shell: sudo mysqlsh --uri clusteradmin@mysql-cluster1 -p'1' --execute "shell.connect('clusteradmin@mysql-cluster1:3306')"
+    - name: "create cluster"
+      shell: sudo mysqlsh --uri clusteradmin@mysql-cluster1 -p'1' --execute "cluster = dba.createCluster('my_innodb_cluster');"
+    - name: "add instance 2"
+      shell: sudo mysqlsh --uri clusteradmin@mysql-cluster1 -p'1' --execute "cluster.addInstance('clusteradmin@mysql-cluster2:3306')"
+    - name: "add instance 3"
+      shell: sudo mysqlsh --uri clusteradmin@mysql-cluster1 -p'1' --execute "cluster.addInstance('clusteradmin@mysql-cluster3:3306')"
+    - name: "cluster status"
+      shell: sudo mysqlsh --uri clusteradmin@mysql-cluster1 -p'1' --execute "cluster.status()"
