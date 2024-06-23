@@ -1,0 +1,22 @@
+alexey@alexey-desktop-22:~/HL2/HL2-hw4-mysqlcluster/provision$ ansible-playbook -i hosts playbooks/create_cluster.yml -vvv
+ansible-playbook 2.9.6
+  config file = /home/alexey/HL2/HL2-hw4-mysqlcluster/provision/ansible.cfg
+  configured module search path = ['/home/alexey/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.8.10 (default, Nov 22 2023, 10:22:35) [GCC 9.4.0]
+Using /home/alexey/HL2/HL2-hw4-mysqlcluster/provision/ansible.cfg as config file
+host_list declined parsing /home/alexey/HL2/HL2-hw4-mysqlcluster/provision/hosts as it did not pass its verify_file() method
+script declined parsing /home/alexey/HL2/HL2-hw4-mysqlcluster/provision/hosts as it did not pass its verify_file() method
+auto declined parsing /home/alexey/HL2/HL2-hw4-mysqlcluster/provision/hosts as it did not pass its verify_file() method
+Parsed /home/alexey/HL2/HL2-hw4-mysqlcluster/provision/hosts inventory source with ini plugin
+ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead
+
+The error appears to be in '/home/alexey/HL2/HL2-hw4-mysqlcluster/provision/playbooks/create_cluster.yml': line 1, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+tasks:
+^ here
